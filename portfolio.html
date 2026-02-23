@@ -28,6 +28,7 @@
      
         .navbar {
             background: rgba(15, 23, 42, 0.95) !important;
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 20px rgba(30, 58, 138, 0.3);
             padding: 15px 0;
@@ -38,6 +39,7 @@
             font-size: 1.5rem;
             background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -219,6 +221,7 @@
             font-size: 2.5rem;
             background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 15px;
         }
@@ -504,6 +507,7 @@
 
         .contact-item {
             background: rgba(255, 255, 255, 0.1);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             padding: 25px 35px;
             border-radius: 15px;
@@ -669,6 +673,25 @@
             box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
         }
 
+        .greeting-message {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            font-weight: 500;
+            animation: fadeInUp 1s ease;
+        }
+
+        .about-description {
+            font-size: 1.1rem;
+            color: #ffffff;
+            line-height: 1.8;
+        }
+
+        .achievement-list {
+            margin-top: 10px;
+            padding-left: 20px;
+            color: #ffffff;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
@@ -705,7 +728,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Arivu</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -726,7 +749,7 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content text-center">
-                <div id="greetingMessage" style="font-size: 1.3rem; margin-bottom: 20px; font-weight: 500; animation: fadeInUp 1s ease;"></div>
+                <div id="greetingMessage" class="greeting-message"></div>
                 <h1>Arivuselvan Elavarasan</h1>
                 <p class="subtitle">AI Engineer | Java Developer | Full Stack Developer</p>
                 <p class="description">Passionate about Artificial Intelligence, Machine Learning, and Full-Stack Web Development.<br>Specializing in Java backend development and building innovative solutions with cutting-edge technologies.</p>
@@ -745,7 +768,7 @@
             <img src="COURTSUIT PICTURE.png" alt="Arivuselvan Elavarasan" class="about-profile-photo" >
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center mb-5">
-                    <p style="font-size: 1.1rem; color: #ffffff; line-height: 1.8;">
+                    <p class="about-description">
                         I'm a passionate B.Tech student specializing in Artificial Intelligence & Data Science at K S Rangasamy College of Technology. 
                         With a strong foundation in full-stack development and machine learning, I love creating innovative solutions 
                         that bridge the gap between technology and real-world problems. My expertise spans across modern web technologies, 
@@ -866,7 +889,7 @@
                                 <span class="tech-badge">Barcode API</span>
                                 <span class="tech-badge">EmailJS</span>
                             </div>
-                            <a href="https://scanpick.vercel.app" target="_blank" class="project-link">
+                            <a href="https://scanpick.vercel.app" target="_blank" rel="noopener" class="project-link">
                                 View Live Project <i class="fas fa-external-link-alt"></i>
                             </a>
                         </div>
@@ -921,7 +944,7 @@
                                 <span class="tech-badge">AI Automation</span>
                                 <span class="tech-badge">Workflow Design</span>
                             </div>
-                            <a href="https://github.com/Arivu-05-git/HospitalityAIAgent" target="_blank" class="project-link">
+                            <a href="https://github.com/Arivu-05-git/HospitalityAIAgent" target="_blank" rel="noopener" class="project-link">
                                 View on GitHub <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -953,7 +976,7 @@
                                 <span class="tech-badge">Decision Trees</span>
                                 <span class="tech-badge">Random Forest</span>
                             </div>
-                            <a href="https://github.com/Arivu-05-git/classify-my-wares" target="_blank" class="project-link">
+                            <a href="https://github.com/Arivu-05-git/classify-my-wares" target="_blank" rel="noopener" class="project-link">
                                 View on GitHub <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -1088,7 +1111,7 @@
                         <div class="achievement-content">
                             <h5>NPTEL Certifications</h5>
                             <p>Successfully completed multiple NPTEL courses with Elite grade:</p>
-                            <ul style="margin-top: 10px; padding-left: 20px; color: #ffffff;">
+                            <ul class="achievement-list">
                                 <li>The Joy of Computing using Python</li>
                                 <li>English Language for Competitive Exams</li>
                                 <li>Advanced R Programming for Data Analytics in Business</li>
@@ -1126,11 +1149,11 @@
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-linkedin"></i>
-                    <p><a href="https://linkedin.com/in/arivuselvan" target="_blank">LinkedIn Profile</a></p>
+                    <p><a href="https://linkedin.com/in/arivuselvan" target="_blank" rel="noopener">LinkedIn Profile</a></p>
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-hackerrank"></i>
-                    <p><a href="https://www.hackerrank.com/profile/arivuselvan1605" target="_blank">HackerRank Profile</a></p>
+                    <p><a href="https://www.hackerrank.com/profile/arivuselvan1605" target="_blank" rel="noopener">HackerRank Profile</a></p>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
