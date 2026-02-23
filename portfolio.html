@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arivuselvan Elavarasan - AI Engineer | Java Developer | Full Stack Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            overflow-x: hidden;
+            background: #0f172a;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+     
+        .navbar {
+            background: rgba(15, 23, 42, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(30, 58, 138, 0.3);
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-link {
+            color: #ffffff !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #60a5fa !important;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            margin: 0 auto 30px;
+            animation: fadeInUp 1s ease 0.3s backwards;
+            object-fit: cover;
+        }
+
+        .btn-custom {
+            background: white;
+            color: #1e3a8a;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin: 5px;
+            animation: fadeInUp 1s ease 0.6s backwards;
+        }
+
+        .btn-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(30, 58, 138, 0.3);
+            color: #1e3a8a;
+        }
+
+        .btn-outline-custom {
+            border: 2px solid white;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin: 5px;
+            animation: fadeInUp 1s ease 0.6s backwards;
+        }
+
+        .btn-outline-custom:hover {
+            background: white;
+            color: #1e3a8a;
+            transform: translateY(-3px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+      
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+            text-align: center;
+            position: relative;
+            color: #ffffff;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            margin: 20px auto 0;
+            border-radius: 2px;
+        }
+
+        
+        .about-section {
+            background: #1e293b;
+        }
+
+        .about-profile-photo {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 15px;
+            border: 5px solid #1e3a8a;
+            box-shadow: 0 10px 40px rgba(30, 58, 138, 0.3);
+            margin: 0 auto 40px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .stats-box {
+            background: #0f172a;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(30, 58, 138, 0.3);
+            margin: 10px 0;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #334155;
+        }
+
+        .stats-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .stats-box i {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+        }
+
+        .stats-box h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #60a5fa;
+            margin: 10px 0;
+        }
+
+        .stats-box p {
+            color: #cbd5e1;
+            font-size: 0.9rem;
+        }
+
+        .education-card {
+            background: #0f172a;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(30, 58, 138, 0.3);
+            margin-bottom: 30px;
+            border-left: 5px solid #3b82f6;
+            transition: all 0.3s ease;
+        }
+
+        .education-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(30, 58, 138, 0.2);
+        }
+
+        .education-card h4 {
+            color: #60a5fa;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .education-card .institution {
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .education-card .duration {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .education-card .grade {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+
+        .projects-section {
+            background: #1e293b;
+        }
+
+        .project-card {
+            background: #0f172a;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(30, 58, 138, 0.3);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            height: 100%;
+            border: 1px solid #334155;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+            padding: 30px;
+            color: white;
+        }
+
+        .project-header h4 {
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .project-body {
+            padding: 25px;
+        }
+
+        .project-body p {
+            color: #cbd5e1;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tech-badge {
+            background: #1e293b;
+            color: #60a5fa;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid #334155;
+        }
+
+        .project-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .project-features li {
+            padding: 5px 0;
+            color: #cbd5e1;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .project-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #60a5fa;
+            font-weight: 700;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 25px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(30, 58, 138, 0.4);
+            color: white;
+        }
+
+        .project-link i {
+            margin-left: 5px;
+        }
+
+      
+        .skills-section {
+            background: #0f172a;
+        }
+
+        .skill-category {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid #334155;
+        }
+
+        .skill-category:hover {
+            background: #0f172a;
+            box-shadow: 0 10px 30px rgba(30, 58, 138, 0.3);
+        }
+
+        .skill-category h5 {
+            color: #60a5fa;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-category h5 i {
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: #0f172a;
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            box-shadow: 0 2px 10px rgba(30, 58, 138, 0.2);
+            transition: all 0.3s ease;
+            border: 1px solid #334155;
+        }
+
+        .skill-tag:hover {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        
+        .achievements-section {
+            background: #1e293b;
+        }
+
+        .achievement-card {
+            background: #0f172a;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(30, 58, 138, 0.3);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            border: 1px solid #334155;
+        }
+
+        .achievement-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .achievement-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .achievement-icon i {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .achievement-content h5 {
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .achievement-content p {
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+       
+        .contact-section {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+            color: white;
+        }
+
+        .contact-section .section-title::after {
+            background: white;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 25px 35px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            min-width: 200px;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .contact-item i {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+      
+        footer {
+            background: #222;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            opacity: 0.8;
+        }
+
+    
+        .greeting-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .greeting-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .greeting-content {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(30, 58, 138, 0.5);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            border: 2px solid #3b82f6;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+        }
+
+        .greeting-modal.show .greeting-content {
+            transform: scale(1);
+            animation: bounceIn 0.6s ease;
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.3);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .greeting-content h2 {
+            color: #ffffff;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .greeting-content .wave {
+            font-size: 3rem;
+            display: inline-block;
+            animation: wave 1s ease infinite;
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(20deg); }
+            75% { transform: rotate(-20deg); }
+        }
+
+        .greeting-content p {
+            color: #cbd5e1;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .greeting-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #3b82f6;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .greeting-input:focus {
+            outline: none;
+            border-color: #60a5fa;
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 20px rgba(96, 165, 250, 0.3);
+        }
+
+        .greeting-input::placeholder {
+            color: #94a3b8;
+        }
+
+        .greeting-btn {
+            background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .greeting-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .education-card:hover {
+                transform: translateX(5px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Greeting Modal -->
+    <div class="greeting-modal" id="greetingModal">
+        <div class="greeting-content">
+            <span class="wave">👋</span>
+            <h2>Welcome to My Portfolio!</h2>
+            <p>I'd love to know who's visiting</p>
+            <input type="text" class="greeting-input" id="nameInput" placeholder="Enter your name..." autocomplete="off">
+            <button class="greeting-btn" onclick="saveVisitorName()">Let's Go!</button>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Arivu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content text-center">
+                <div id="greetingMessage" style="font-size: 1.3rem; margin-bottom: 20px; font-weight: 500; animation: fadeInUp 1s ease;"></div>
+                <h1>Arivuselvan Elavarasan</h1>
+                <p class="subtitle">AI Engineer | Java Developer | Full Stack Developer</p>
+                <p class="description">Passionate about Artificial Intelligence, Machine Learning, and Full-Stack Web Development.<br>Specializing in Java backend development and building innovative solutions with cutting-edge technologies.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn-custom">View Projects</a>
+                    <a href="#contact" class="btn-outline-custom">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <img src="COURTSUIT PICTURE.png" alt="Arivuselvan Elavarasan" class="about-profile-photo" >
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <p style="font-size: 1.1rem; color: #ffffff; line-height: 1.8;">
+                        I'm a passionate B.Tech student specializing in Artificial Intelligence & Data Science at K S Rangasamy College of Technology. 
+                        With a strong foundation in full-stack development and machine learning, I love creating innovative solutions 
+                        that bridge the gap between technology and real-world problems. My expertise spans across modern web technologies, 
+                        AI/ML algorithms, and cloud platforms.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="stats-box">
+                        <i class="fas fa-trophy"></i>
+                        <h3>9.22</h3>
+                        <p>Current CGPA</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stats-box">
+                        <i class="fas fa-code"></i>
+                        <h3>100+</h3>
+                        <p>LeetCode Problems Solved</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stats-box">
+                        <i class="fas fa-project-diagram"></i>
+                        <h3>4+</h3>
+                        <p>Major Projects Completed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="education-card">
+                        <h4>B.Tech - Artificial Intelligence & Data Science</h4>
+                        <p class="institution">K S Rangasamy College of Technology, Tiruchengode</p>
+                        <p class="duration">2025 - Present</p>
+                        <span class="grade">CGPA: 9.22</span>
+                    </div>
+
+                    <div class="education-card">
+                        <h4>Higher Secondary Education (12th Grade)</h4>
+                        <p class="institution">Vidhya Vikas Matric Hr.Sec School, Tamil Nadu</p>
+                        <p class="duration">2021 - 2022</p>
+                        <span class="grade">Percentage: 95%</span>
+                    </div>
+
+                    <div class="education-card">
+                        <h4>Secondary Education (10th Grade)</h4>
+                        <p class="institution">Vidhya Vikas Matric Hr.Sec School, Tamil Nadu</p>
+                        <p class="duration">2019 - 2020</p>
+                        <span class="grade">Percentage: 99%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4><i class="fas fa-hospital"></i> Advanced Doctor Booking System</h4>
+                        </div>
+                        <div class="project-body">
+                            <p>A comprehensive full-stack web application for seamless doctor appointment scheduling with secure user authentication and responsive design.</p>
+                            <ul class="project-features">
+                                <li>Role-based access control (Admin/Doctor/Patient)</li>
+                                <li>Real-time doctor availability tracking</li>
+                                <li>RESTful APIs for frontend-backend communication</li>
+                                <li>Data security with Spring Security & JWT</li>
+                                <li>Responsive across all devices</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Tailwind CSS</span>
+                                <span class="tech-badge">Java</span>
+                                <span class="tech-badge">Spring Boot</span>
+                                <span class="tech-badge">Hibernate</span>
+                                <span class="tech-badge">MySQL</span>
+                                <span class="tech-badge">REST APIs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4><i class="fas fa-barcode"></i> Scan & Pick</h4>
+                        </div>
+                        <div class="project-body">
+                            <p>Smart product identification system enabling users to scan barcodes with mobile devices for instant product information retrieval.</p>
+                            <ul class="project-features">
+                                <li>Mobile-friendly barcode scanning interface</li>
+                                <li>Real-time product details lookup</li>
+                                <li>Backend API for data processing</li>
+                                <li>MongoDB for efficient data storage</li>
+                                <li>Email notifications with EmailJS</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Node.js</span>
+                                <span class="tech-badge">Express.js</span>
+                                <span class="tech-badge">MongoDB</span>
+                                <span class="tech-badge">Barcode API</span>
+                                <span class="tech-badge">EmailJS</span>
+                            </div>
+                            <a href="https://scanpick.vercel.app" target="_blank" class="project-link">
+                                View Live Project <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4><i class="fas fa-home"></i> Land Price Prediction</h4>
+                        </div>
+                        <div class="project-body">
+                            <p>Machine learning-based predictive system to estimate land prices by analyzing location, area, amenities, and market trends.</p>
+                            <ul class="project-features">
+                                <li>Data preprocessing & feature engineering</li>
+                                <li>Multiple regression algorithms implementation</li>
+                                <li>Model performance evaluation (MAE, MSE, R²)</li>
+                                <li>Data visualization with Matplotlib</li>
+                                <li>Feature importance analysis</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Scikit-learn</span>
+                                <span class="tech-badge">Pandas</span>
+                                <span class="tech-badge">NumPy</span>
+                                <span class="tech-badge">Matplotlib</span>
+                                <span class="tech-badge">Jupyter</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4><i class="fas fa-robot"></i> Hospitality AI Agent</h4>
+                        </div>
+                        <div class="project-body">
+                            <p>Intelligent automation system built with UiPath to streamline hospitality operations using AI-powered workflows and robotic process automation.</p>
+                            <ul class="project-features">
+                                <li>Automated hospitality management workflows</li>
+                                <li>AI-powered decision making and processing</li>
+                                <li>Robotic Process Automation (RPA) implementation</li>
+                                <li>Efficient task scheduling and execution</li>
+                                <li>Integration with hospitality systems</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-badge">UiPath</span>
+                                <span class="tech-badge">RPA</span>
+                                <span class="tech-badge">AI Automation</span>
+                                <span class="tech-badge">Workflow Design</span>
+                            </div>
+                            <a href="https://github.com/Arivu-05-git/HospitalityAIAgent" target="_blank" class="project-link">
+                                View on GitHub <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4><i class="fas fa-boxes"></i> Classify My Wares</h4>
+                        </div>
+                        <div class="project-body">
+                            <p>Intelligent product classification system utilizing machine learning algorithms to automatically categorize and organize inventory with a modern web interface.</p>
+                            <ul class="project-features">
+                                <li>Machine learning classification algorithms</li>
+                                <li>K-Nearest Neighbors (KNN) implementation</li>
+                                <li>Decision Tree & Random Forest models</li>
+                                <li>Feature extraction and preprocessing</li>
+                                <li>Interactive web interface for classification</li>
+                                <li>Model accuracy comparison and evaluation</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Scikit-learn</span>
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">KNN Algorithm</span>
+                                <span class="tech-badge">Decision Trees</span>
+                                <span class="tech-badge">Random Forest</span>
+                            </div>
+                            <a href="https://github.com/Arivu-05-git/classify-my-wares" target="_blank" class="project-link">
+                                View on GitHub <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="skill-category">
+                        <h5><i class="fas fa-code"></i> Front-End Development</h5>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">ReactJS</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h5><i class="fas fa-server"></i> Back-End Development</h5>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express.js</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Spring Boot</span>
+                            <span class="skill-tag">Hibernate JPA</span>
+                            <span class="skill-tag">REST APIs</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h5><i class="fab fa-java"></i> Java Development & Core Concepts</h5>
+                        <div class="skill-tags">
+                            <span class="skill-tag">OOP (Object-Oriented Programming)</span>
+                            <span class="skill-tag">Collections Framework</span>
+                            <span class="skill-tag">Exception Handling</span>
+                            <span class="skill-tag">Multithreading</span>
+                            <span class="skill-tag">JDBC</span>
+                            
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h5><i class="fas fa-database"></i> Databases</h5>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">MySQL</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h5><i class="fas fa-robot"></i> AI & Machine Learning</h5>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Scikit-learn</span>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">NumPy</span>
+                            <span class="skill-tag">Matplotlib</span>
+                            <span class="skill-tag">Jupyter</span>
+                            <span class="skill-tag">Linear Regression</span>
+                            <span class="skill-tag">Decision Trees</span>
+                            <span class="skill-tag">Random Forest</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h5><i class="fas fa-tools"></i> Developer Tools & Automation</h5>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">ChatGPT</span>
+                            <span class="skill-tag">GitHub Copilot</span>
+                            <span class="skill-tag">UiPath</span>
+                            <span class="skill-tag">n8n</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h5><i class="fas fa-lightbulb"></i> Areas of Interest</h5>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Software Development</span>
+                            <span class="skill-tag">Full-Stack Development</span>
+                            <span class="skill-tag">Artificial Intelligence</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Research & Development</span>
+                            <span class="skill-tag">Emerging Technologies</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h5><i class="fas fa-user"></i> Soft Skills</h5>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Communication</span>
+                            <span class="skill-tag">Adaptability</span>
+                            <span class="skill-tag">Problem Solving</span>
+                            <span class="skill-tag">Team Collaboration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements-section">
+        <div class="container">
+            <h2 class="section-title">Achievements</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h5>LeetCode Problem Solver</h5>
+                            <p>Solved 100+ LeetCode problems, enhancing problem-solving skills in data structures and algorithms</p>
+                        </div>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h5>NPTEL Certifications</h5>
+                            <p>Successfully completed multiple NPTEL courses with Elite grade:</p>
+                            <ul style="margin-top: 10px; padding-left: 20px; color: #ffffff;">
+                                <li>The Joy of Computing using Python</li>
+                                <li>English Language for Competitive Exams</li>
+                                <li>Advanced R Programming for Data Analytics in Business</li>
+                                <li>Data Analytics with Python</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h5>Infosys Springboard Certifications</h5>
+                            <p>Completed professional development courses through Infosys Springboard platform, enhancing industry-relevant skills and technical expertise</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p><a href="mailto:arivuselvan1605@gmail.com">arivuselvan1605@gmail.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p><a href="tel:+918838482802">+91 88384 82802</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <p><a href="https://linkedin.com/in/arivuselvan" target="_blank">LinkedIn Profile</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-hackerrank"></i>
+                    <p><a href="https://www.hackerrank.com/profile/arivuselvan1605" target="_blank">HackerRank Profile</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Krishnagiri Dt, Tamil Nadu</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Arivuselvan Elavarasan. All Rights Reserved. | Built with passion and code ❤️</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Personalized Greeting Feature with Animated Modal - Always asks on refresh
+        window.addEventListener('load', function() {
+            // Show animated modal every time
+            const modal = document.getElementById('greetingModal');
+            setTimeout(() => {
+                modal.classList.add('show');
+            }, 500);
+            
+            // Focus on input
+            setTimeout(() => {
+                document.getElementById('nameInput').focus();
+            }, 1000);
+            
+            // Allow Enter key to submit
+            document.getElementById('nameInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    saveVisitorName();
+                }
+            });
+        });
+        
+        function saveVisitorName() {
+            const nameInput = document.getElementById('nameInput');
+            const visitorName = nameInput.value.trim();
+            
+            if (visitorName !== '') {
+                // Hide modal with animation
+                const modal = document.getElementById('greetingModal');
+                modal.classList.remove('show');
+                
+                // Display greeting after modal closes
+                setTimeout(() => {
+                    displayGreeting(visitorName);
+                }, 300);
+            } else {
+                nameInput.focus();
+                nameInput.style.borderColor = '#ef4444';
+                setTimeout(() => {
+                    nameInput.style.borderColor = '#3b82f6';
+                }, 500);
+            }
+        }
+        
+        function displayGreeting(name) {
+            const greetingElement = document.getElementById('greetingMessage');
+            const currentHour = new Date().getHours();
+            let greeting;
+            
+            if (currentHour < 12) {
+                greeting = 'Good Morning';
+            } else if (currentHour < 18) {
+                greeting = 'Good Afternoon';
+            } else {
+                greeting = 'Good Evening';
+            }
+            
+            greetingElement.innerHTML = `${greeting}, <span style="color: #60a5fa; font-weight: 700;">${name}</span>! 👋`;
+        }
+    </script>
+</body>
+</html>
